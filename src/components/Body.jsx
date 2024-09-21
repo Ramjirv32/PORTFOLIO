@@ -1,27 +1,43 @@
+'use client'
+
 import React from 'react';
+import { Linkedin, Facebook, Twitter, Youtube } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-function Body() {
+
+
+export default function Footer() {
   return (
-    <div className="bg-black min-h-screen text-white flex items-center justify-between px-6 md:px-16">
-      {/* Left Section: Name and Title */}
-      <div className="flex flex-col space-y-6 max-w-md">
-        <h1 className="text-4xl md:text-6xl font-bold">Ramji B</h1>
-        <p className="text-2xl">Software Engineer</p>
-        <button className="mt-4 py-2 px-6 bg-purple-600 hover:bg-purple-800 text-white font-medium rounded-full transition-colors">
-          More Info
-        </button>
+    <footer className="bg-gray-900 py-8">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+        <motion.div
+          className="flex space-x-4 mb-4 md:mb-0"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <a href="https://www.linkedin.com/in/ramji-b-613539308/" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <Facebook size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <Youtube size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+          </a>
+        </motion.div>
+        <motion.div
+          className="text-gray-400 text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          © 2024 Ramji. All rights reserved.
+        </motion.div>
       </div>
-
-      {/* Right Section: Image */}
-      <div className="hidden md:block">
-        <img
-          src="https://picsum.photos/400/400?random=20"
-          alt="Profile"
-          className="rounded-full border-4 border-purple-600"
-        />
-      </div>
-    </div>
+    </footer>
   );
 }
-
-export default Body;
