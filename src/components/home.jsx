@@ -213,13 +213,13 @@ export default function Component() {
       <a href="https://www.linkedin.com/in/ramji-b-613539308/" target="_blank" rel="noopener noreferrer">
         <Linkedin size={24} className="text-gray-400 hover:text-white cursor-pointer" />
       </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/Ramjirv32" target="_blank" rel="noopener noreferrer">
         <FaGithub size={24} className="text-gray-400 hover:text-white cursor-pointer" />
       </a>
       <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
         <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer" />
       </a>
-      <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://leetcode.com/u/RAMJI____B/" target="_blank" rel="noopener noreferrer">
         <SiLeetcode size={24} className="text-gray-400 hover:text-white cursor-pointer" />
       </a>
     </div>
