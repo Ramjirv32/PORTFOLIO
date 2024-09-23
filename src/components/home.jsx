@@ -9,8 +9,11 @@ import door from "./images/door.jpg";
 import v from "./images/v.mp4";
 import PRF from "./images/R.png";
 import console from "./images/console.mp4";
+import { FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
-import { Menu, X, Linkedin, Facebook, Twitter, Youtube, Mail, Phone, MapPin, Star } from 'lucide-react';
+
+import { Menu, X, Linkedin, Twitter, Mail, Phone, MapPin, Star } from 'lucide-react';
 
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -205,26 +208,27 @@ export default function Component() {
       </section>
 
       <footer className="bg-gray-900 py-8">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://www.linkedin.com/in/ramji-b-613539308/" target="_blank" rel="noopener noreferrer">
-              <Linkedin size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <Youtube size={24} className="text-gray-400 hover:text-white cursor-pointer" />
-            </a>
-          </div>
-          <div className="text-gray-400 text-sm">
-            © 2024 Ramji. All rights reserved.
-          </div>
-        </div>
-      </footer>
+  <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <div className="flex space-x-4 mb-4 md:mb-0">
+      <a href="https://www.linkedin.com/in/ramji-b-613539308/" target="_blank" rel="noopener noreferrer">
+        <Linkedin size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <FaGithub size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+      </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+      </a>
+      <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer">
+        <SiLeetcode size={24} className="text-gray-400 hover:text-white cursor-pointer" />
+      </a>
+    </div>
+    <div className="text-gray-400 text-sm">
+      © 2024 Ramji. All rights reserved.
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
