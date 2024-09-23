@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import img from "./styles/12.jpg";
+ //import img from "./styles/12.jpg";
 import food from "./images/f1.png";
 import motion from "./images/motion.png";
 import grs from "./images/i.png";
-import port from "./styles/12.jpg";
+import port from "./images/KPR.png";
 import api from "./images/api.png";
 import door from "./images/door.jpg";
 import v from "./images/v.mp4";
+import PRF from "./images/R.png";
 import console from "./images/console.mp4";
 
 import { Menu, X, Linkedin, Facebook, Twitter, Youtube, Mail, Phone, MapPin, Star } from 'lucide-react';
@@ -48,31 +49,31 @@ export default function Component() {
           </div>
         )}
       </header>
-
       <section id="home" className="container mx-auto pt-24 px-6 md:flex md:items-center md:justify-between">
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            This is your developer <span className="text-purple-400">Ramji</span>
-          </h1>
-          <p className="text-gray-400 mb-6">
-            Passionate full-stack developer and UI designer with a growing interest in cloud security. Committed to creating innovative and efficient solutions.
-          </p>
-          <div className="flex space-x-4">
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-full">
-              Discuss Projects
-            </button>
-            <button className="border border-purple-600 text-purple-400 px-6 py-3 rounded-full">
-              View Portfolio
-            </button>
-          </div>
-        </div>
-        <div className="md:w-1/2 relative">
-          <img src={img} alt="Ramji" className="w-full rounded-lg" />
-          <div className="absolute bottom-4 right-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
-            Skilled in 2023
-          </div>
-        </div>
-      </section>
+  <div className="md:w-1/2 mb-8 md:mb-0">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      This is your developer <span className="text-purple-400">Ramji</span>
+    </h1>
+    <p className="text-gray-400 mb-6">
+      Passionate full-stack developer and UI designer with a growing interest in cloud security. Committed to creating innovative and efficient solutions.
+    </p>
+    <div className="flex space-x-4">
+      <button className="bg-purple-600 text-white px-6 py-3 rounded-full">
+        Discuss Projects
+      </button>
+      <button className="border border-purple-600 text-purple-400 px-6 py-3 rounded-full">
+        View Portfolio
+      </button>
+    </div>
+  </div>
+  <div className="md:w-1/2 relative">
+    <img src={PRF} alt="Ramji" className="w-1/2 rounded-lg transform translate-x-36" />
+    <div className="absolute bottom-4 right-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
+      Skilled in 2023
+    </div>
+  </div>
+</section>
+
 
       <section id="about" className="container mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
@@ -114,7 +115,7 @@ export default function Component() {
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">Project 2</h3>
                 <p className="text-gray-400 mb-4">Project on motion detection security camera</p>
-                <button className="text-purple-400 hover:text-purple-300" onClick={() => window.open('https://ramjirv32.github.io/projectone/first', '_blank')}>
+                <button className="text-purple-400 hover:text-purple-300" onClick={() => window.open('', '_blank')}>
                   View Details
                 </button>
               </div>
