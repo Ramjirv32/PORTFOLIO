@@ -1,72 +1,69 @@
-
-
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-
-export default function Header() {
+import React, { useState } from "react";
+import { Menu } from "lucide-react";
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navItems = ["About", "Projects", "Achievements", "Contact"];
+
   return (
-    <header className="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-90">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center space-x-4"
-        >
-          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+    <header className="bg-[#0a0118] text-gray-300 py-4 px-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="/" className="group relative">
+          <span className="text-3xl mr-5 font-bold animate-pulse">
             Ramji
           </span>
-        </motion.div>
+        </a>
         <nav className="hidden md:flex space-x-6">
-          {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm hover:text-purple-400 transition-colors"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+        {navItems.map((item) => (
+            <a 
+              key={item} 
+              href={`/#${item.toLowerCase()}`} 
+              className="hover:text-white transition-colors "
             >
               {item}
-            </motion.a>
+            </a>
           ))}
         </nav>
-        <motion.button
-          className="bg-purple-600 text-white px-4 py-2 rounded-full hidden md:block hover:bg-purple-700 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Discuss Projects
-        </motion.button>
+        <div className="hidden md:block">
+          <a
+            href="/cv.pdf"
+            download
+            className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block"
+          >
+            Download CV
+          </a>
+        </div>
         <button
+          className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden focus:outline-none"
+          aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
       </div>
       {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-gray-800 py-2"
-        >
-          {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="block px-6 py-2 hover:bg-gray-700"
-              whileHover={{ x: 5 }}
+        <div className="md:hidden mt-4">
+         {navItems.map((item) => (
+  <a 
+    key={item} 
+    href={`/#${item.toLowerCase()}`} 
+    className="block py-2 px-4 text-sm relative text-gray-300 hover:text-white transition-colors duration-300"
+  >
+    {item}
+    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+  </a>
+))}
+
+          <div className="mt-4 px-4">
+            <a
+              href="#@"
+              download
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center"
             >
-              {item}
-            </motion.a>
-          ))}
-        </motion.div>
+              Download CV
+            </a>
+          </div>
+        </div>
       )}
     </header>
   );

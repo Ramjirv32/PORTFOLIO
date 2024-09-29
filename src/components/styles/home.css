@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 600; 
+}
+
+p {
+  font-weight: 400; 
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+}
+
+@keyframes rotate-icon {
+    0% {
+      transform: rotate(0deg) translateX(70%) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(40%) rotate(-360deg);
+    }
+  }
