@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './components/home.jsx'; 
-import Header from './components/Header.jsx'; 
+import Navbar from './components/Header.jsx'; 
 import Skills from './components/Skills.jsx'; 
 import Projects from './components/Projects.jsx'; 
 import Scroll from './components/scroll.jsx';
@@ -12,17 +12,17 @@ function App() {
   return (
     <div className="App">
       <Scroll>
-        <Header />
+        <Navbar />
         <section id="home">
           <Home />
         </section>
-        <section id="Projects">
+        <section id="projects">
           <Projects />
         </section>
-        <section id="Skills">
+        <section id="skills">
           <Skills />
         </section>
-        <section id="email">
+        <section id="contact">
           <Email />
         </section>
       </Scroll>

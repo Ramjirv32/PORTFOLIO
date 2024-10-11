@@ -1,8 +1,9 @@
 "use client"
 import React from "react";
 import food from "./images/f1.png";
+import console from "./images/console.mp4";
 import { FaExternalLinkAlt,FaGithub} from "react-icons/fa";
-//import motion from "./images/motion.png";
+import aadhya from "./images/aadhya.png";
 import grs from "./images/grs.jpg";
 import api from "./images/api.png";
 //import door from "./images/door.jpg";
@@ -38,10 +39,18 @@ const projects = [
     },
     {
       title: "Project 5",
+      description: "As a team, we developed a full-stack parking system website that allows users to search for available parking spaces, book them, and manage their reservations in real-time With IOT integration ",
+      image: 
+      aadhya,
+      liveLink: "https://parking-orcin-tau.vercel.app/",
+      githubLink: ""
+    },
+    {
+      title: "Project 6",
       description: "Future PlaceHolder",
       image: 
       "",
-      liveLink: "https://weather-api-893w.onrender.com/",
+      liveLink: "#",
       githubLink: "#"
     }
   ];
@@ -49,8 +58,8 @@ const projects = [
 function Projects(){
     
     return (
-        <section id="projects" className="py-16 relative w-full">
-        <div className="absolute inset-0 bg-purple-900 opacity-40 rounded-full blur-3xl"></div>
+        <section id="projects" className="py-16 relative w-full bg-black">
+        <div className="absolute inset-0 bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-5xl font-bold text-center mb-12 text-white">Projects</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

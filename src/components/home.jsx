@@ -1,14 +1,11 @@
 "use client"
 
-import React, { useRef, useEffect } from 'react';
-import {  FaHtml5, FaReact, FaCss3Alt, FaJsSquare, FaNodeJs, FaServer, FaAws, FaFire} from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import full from "./images/cloud.webp";
-
-//import v from "./images/v.mp4";
-//import console from "./images/console.mp4";
-import "./styles/home.css";
+import React, { useRef, useEffect } from 'react'
+import { FaHtml5, FaReact, FaCss3Alt, FaJsSquare, FaNodeJs, FaServer, FaAws, FaFire } from 'react-icons/fa'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import full from "./images/cloud.webp"
+import "./styles/home.css"
 
 const technologies = [
   { name: 'HTML', icon: <FaHtml5 size={32} /> },
@@ -19,59 +16,59 @@ const technologies = [
   { name: 'Express', icon: <FaServer size={32} /> },
   { name: 'AWS', icon: <FaAws size={32} /> },
   { name: 'Firebase', icon: <FaFire size={32} /> },
-];
+]
 
 export default function Home() {
-  const aboutRef = useRef(null);
+  const aboutRef = useRef(null)
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
       once: true,
-    });
-  }, []);
+    })
+  }, [])
 
   const smoothScroll = (targetRef) => {
-    const targetPosition = targetRef.current.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 1000;
-    let startTime = null;
+    const targetPosition = targetRef.current.getBoundingClientRect().top + window.pageYOffset
+    const startPosition = window.pageYOffset
+    const distance = targetPosition - startPosition
+    const duration = 1000
+    let startTime = null
 
     const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const scrollProgress = Math.min(timeElapsed / duration, 1);
-      window.scrollTo(0, startPosition + distance * scrollProgress);
+      if (startTime === null) startTime = currentTime
+      const timeElapsed = currentTime - startTime
+      const scrollProgress = Math.min(timeElapsed / duration, 1)
+      window.scrollTo(0, startPosition + distance * scrollProgress)
 
       if (timeElapsed < duration) {
-        requestAnimationFrame(animation);
+        requestAnimationFrame(animation)
       }
-    };
+    }
 
-    requestAnimationFrame(animation);
-  };
+    requestAnimationFrame(animation)
+  }
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
-      smoothScroll(aboutRef);
+      smoothScroll(aboutRef)
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-8 flex flex-col justify-center items-center relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-purple-900 opacity-20 rounded-full blur-3xl transform -translate-y-1/2"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-purple-900 opacity-30 rounded-full blur-3xl transform -translate-y-1/2"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-4xl">
         <div className="relative w-full h-96">
-          <div className="absolute inset-0 bg-purple-600 rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute inset-0 bg-purple-600 rounded-full opacity-30 blur-3xl"></div>
           <div className="absolute inset-0">
             {technologies.map((tech, index) => {
-              const angle = (index / technologies.length) * 2 * Math.PI;
-              const radius = 40;
-              const x = 50 + radius * Math.cos(angle);
-              const y = 50 + radius * Math.sin(angle);
+              const angle = (index / technologies.length) * 2 * Math.PI
+              const radius = 40
+              const x = 50 + radius * Math.cos(angle)
+              const y = 50 + radius * Math.sin(angle)
               return (
                 <div
                   key={tech.name}
@@ -85,15 +82,16 @@ export default function Home() {
                 >
                   {tech.icon}
                 </div>
-              );
+              )
             })}
           </div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-700 rounded-full flex items-center justify-center text-white font-bold text-3xl shadow-lg">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-3xl shadow-inner shadow-black">
             &lt;/&gt;
           </div>
         </div>
 
         <div className="text-center space-y-6 mt-8" >
+          
           <span className="inline-block bg-purple-800 text-white px-4 py-2 rounded-full text-sm mb-4 animate-bounce" data-aos="zoom-in">
             Hey I'm Ramji
           </span>
@@ -119,23 +117,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
-        {[ 
-          { name: 'Twitter', icon: <FaTwitter size={20} /> },
-          { name: 'LinkedIn', icon: <FaLinkedin size={20} /> },
-          { name: 'GitHub', icon: <FaGithub size={20} /> },
-        ].map((social) => (
-          <div
-            key={social.name}
-            className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-purple-700 transition-colors cursor-pointer"
-          >
-            {social.icon}
-          </div>
-        ))} 
-      </div> */}
-
       <section id="about" ref={aboutRef} className="container mx-auto py-16 px-6 relative z-10">
-        <div className="absolute inset-0 bg-gray-900 opacity-40 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-purple-900 opacity-40 rounded-full blur-3xl"></div>
         <h2 className="text-3xl font-bold text-center mb-8 relative z-20">About Me</h2>
         <div className="md:flex md:items-center md:space-x-8 relative z-20">
           <div className="md:w-1/3 mb-8 md:mb-0">
@@ -154,10 +137,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-     
-    
-
     </div>
-  );
+  )
 }
