@@ -60,13 +60,13 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white p-4 md:p-8 flex flex-col justify-center items-center relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-purple-900 opacity-30 rounded-full blur-3xl transform -translate-y-1/2"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-4xl">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-4xl mt-20">
         <div className="relative w-full h-96">
           <div className="absolute inset-0 bg-purple-600 rounded-full opacity-30 blur-3xl"></div>
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 mt-12">
             {technologies.map((tech, index) => {
               const angle = (index / technologies.length) * 2 * Math.PI
-              const radius = 40
+              const radius = 42
               const x = 50 + radius * Math.cos(angle)
               const y = 50 + radius * Math.sin(angle)
               return (
@@ -85,13 +85,12 @@ export default function Home() {
               )
             })}
           </div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-3xl shadow-inner shadow-black">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-12 w-24 h-24 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-3xl shadow-inner shadow-black">
             &lt;/&gt;
           </div>
         </div>
 
-        <div className="text-center space-y-6 mt-8" >
-          
+        <div className="text-center space-y-6 mt-8">
           <span className="inline-block bg-purple-800 text-white px-4 py-2 rounded-full text-sm mb-4 animate-bounce" data-aos="zoom-in">
             Hey I'm Ramji
           </span>
