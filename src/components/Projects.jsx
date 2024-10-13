@@ -34,8 +34,8 @@ const projects = [
     title: "Project 4",
     description: "Weather API using Node and Open Weather",
     image: api,
-    liveLink: "https://weather-api-893w.onrender.com/",
-    githubLink: "https://github.com/Ramjirv32/WEATHER-API"
+    liveLink: "https://weather-api-in-react-js.vercel.app/",
+    githubLink: "https://github.com/Ramjirv32/Weather-API-in-REACT-JS"
   },
   {
     title: "Project 5",
