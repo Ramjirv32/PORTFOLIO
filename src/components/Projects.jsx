@@ -56,7 +56,7 @@ const projects = [
     title: "Project 7",
     description: "AI-Intergrated Application",
     image: ai,
-    liveLink: "",
+    liveLink: "https://ai-intergrated-application-qwuv.vercel.app/",
     githubLink: "https://github.com/Ramjirv32/AI-Intergrated-Application"
   },
   {
