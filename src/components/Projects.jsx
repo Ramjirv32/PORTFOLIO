@@ -57,7 +57,7 @@ const projects = [
     description: "AI-Intergrated Application",
     image: ai,
     liveLink: "",
-    githubLink: ""
+    githubLink: "https://github.com/Ramjirv32/AI-Intergrated-Application"
   },
   {
     title: "Project 8",
