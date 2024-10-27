@@ -7,6 +7,7 @@ import aadhya from "./images/aadhya.png";
 import grs from "./images/grs.jpg";
 import api from "./images/api.png";
 import Hug from "./images/Hug.png";
+import ai from "./images/ai.png";
 
 const projects = [
   {
@@ -53,6 +54,13 @@ const projects = [
   },
   {
     title: "Project 7",
+    description: "AI-Intergrated Application",
+    image: ai,
+    liveLink: "",
+    githubLink: ""
+  },
+  {
+    title: "Project 8",
     description: "Future PlaceHolder",
     image: "",
     liveLink: "#",

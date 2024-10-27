@@ -12,7 +12,7 @@ function Skills() {
     { name: 'Express', icon: <FaCode className="text-purple-400 hover:text-white" size={20} /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-purple-400 hover:text-white" size={20} /> },
     { name: 'C Programming', icon: <SiC className="text-purple-400 hover:text-white" size={20} /> },
-    { name: 'Cloud Security', icon: <FaCloud className="text-purple-400 hover:text-white" size={20} /> },
+    { name: ' Learning Cloud ', icon: <FaCloud className="text-purple-400 hover:text-white" size={20} /> },
   ];
 
   return (
