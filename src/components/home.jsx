@@ -104,7 +104,7 @@ export default function Home() {
           </h2>
 
           <p className="text-lg mb-8 max-w-2xl text-gray-300 mx-auto">
-            I'm a Full Stack Software Engineer with experience in Website and Mobile App development. Check out my projects below.
+            I'm a Full Stack Software Engineer with experience in Website Development. Check out my projects below.
           </p>
 
           <button
