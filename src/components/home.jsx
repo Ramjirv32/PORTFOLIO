@@ -124,16 +124,17 @@ export default function Home() {
             <img src={full} alt="Ramji" className="w-full rounded-lg" />
           </div>
           <div className="md:w-2/3">
-            <p className="text-gray-300 leading-relaxed" data-aos="fade-up">
-              Hello! I'm Ramji, a dedicated Full Stack Developer currently pursuing my II CSE B at KPRIET. My journey in the world of technology has been driven by a passion for creating innovative solutions and a constant desire to learn and grow.
-            </p>
-            <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
-              With a strong foundation in both frontend and backend technologies, I'm always excited to take on new challenges. My recent focus has been on expanding my expertise into cloud security, as I believe it's crucial for building robust and secure applications in today's digital landscape.
-            </p>
-            <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
-              When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or brainstorming ideas for my next big project. I'm always open to collaborations and new opportunities to push the boundaries of what's possible in web development and cloud technologies.
-            </p>
-          </div>
+  <p className="text-gray-300 leading-relaxed" data-aos="fade-up">
+    My name is Ramji, and I am a Full Stack Developer currently studying in II CSE B at KPRIET. There has always been a burning passion for creating new things and a constant urge to learn, which has driven me into the technology industry.
+  </p>
+  <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
+    I have experience in both frontend and backend development, and I am looking for more new opportunities. Recently, I have been working on integrating cloud technologies into applications because I believe they are essential for building strong applications in the modern world.
+  </p>
+  <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
+    If I am not working on code, I love browsing for new tech, working on open-source projects, or thinking about my next move. I am always ready for collaboration and new opportunities in web development and cloud technologies.
+  </p>
+</div>
+
         </div>
       </section>
     </div>

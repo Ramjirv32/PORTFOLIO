@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import food from "./images/f1.png";
+// import food from "./images/f1.png";
 import console from "./images/console.mp4";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import aadhya from "./images/aadhya.png";
@@ -10,57 +10,44 @@ import Hug from "./images/Hug.png";
 import ai from "./images/ai.png";
 
 const projects = [
+  
   {
     title: "Project 1",
-    description: "My first Demo project done using Bootstrap",
-    image: food,
-    liveLink: "https://ramjirv32.github.io/First-WebPage-Bootstrap/first",
-    githubLink: "https://github.com/Ramjirv32/First-WebPage-Bootstrap"
-  },
-  {
-    title: "Project 2",
-    description: "Project on motion detection security camera",
-    image: "",
-    liveLink: "",
-    githubLink: "#"
-  },
-  {
-    title: "Project 3",
     description: "Console Application on Vehicle Rental system",
     image: grs,
     liveLink: console,
     githubLink: "https://github.com/Ramjirv32/Vehicle-Rental-System"
   },
   {
-    title: "Project 4",
+    title: "Project 2",
     description: "Weather API using Node and Open Weather",
     image: api,
     liveLink: "https://weather-api-in-react-js.vercel.app/",
     githubLink: "https://github.com/Ramjirv32/Weather-API-in-REACT-JS"
   },
   {
-    title: "Project 5",
+    title: "Project 3",
     description: "As a team, we developed a full-stack parking system website that allows users to search for available parking spaces, book them, and manage their reservations in real-time With IOT integration",
     image: aadhya,
     liveLink: "https://parking-orcin-tau.vercel.app/",
     githubLink: ""
   },
   {
-    title: "Project 6",
+    title: "Project 4",
     description: "Text-Image Generator Using Node and API",
     image: Hug,
     liveLink: "https://ai-image-generator-hugging-face.vercel.app/",
     githubLink: "https://github.com/Ramjirv32/AI-image-Generator-HUGGING-FACE"
   },
   {
-    title: "Project 7",
+    title: "Project 5",
     description: "AI-Intergrated Application",
     image: ai,
     liveLink: "https://ai-intergrated-application-qwuv.vercel.app/",
     githubLink: "https://github.com/Ramjirv32/AI-Intergrated-Application"
   },
   {
-    title: "Project 8",
+    title: "Project 6",
     description: "Future PlaceHolder",
     image: "",
     liveLink: "#",

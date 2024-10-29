@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaStar, FaHtml5, FaJsSquare, FaNode, FaCode, FaCloud } from "react-icons/fa";
+import {  FaHtml5, FaJsSquare, FaNode, FaCode, FaCloud } from "react-icons/fa";
 import { SiPostgresql, SiTailwindcss, SiC } from "react-icons/si";
 
 function Skills() {

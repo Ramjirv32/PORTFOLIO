@@ -2,8 +2,10 @@ import { FaEnvelope, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
-export default function Component() {
+export default function ContactComponent() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,11 +13,45 @@ export default function Component() {
       once: true,
     });
   }, []);
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-   
-    alert("Form submitted!");
+
+    const formData = new FormData(e.target);
+    const userName = formData.get("user_name");
+    const userEmail = formData.get("user_email");
+    const userMessage = formData.get("message");
+
+    const messageBody = `You got a new message from:\n\nName: ${userName}\nEmail: ${userEmail}\nMessage: ${userMessage}`;
+
+    emailjs.send('service_0ftgu5e', 'template_tf5aupo', {
+        from_name: userName,
+        from_email: userEmail,
+        message: messageBody
+    }, 'gvOiEyfmztinIkTol')
+    .then((result) => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Email Sent!',
+            text: 'Your message has been sent successfully.',
+            confirmButtonText: 'OK',
+            background: '#1a1a1a',
+            color: '#fff',
+            confirmButtonColor: '#purple-600'
+        });
+    }, (error) => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Failed to Send',
+            text: 'There was an error sending your message. Please try again later.',
+            confirmButtonText: 'OK',
+            background: '#1a1a1a',
+            color: '#fff',
+            confirmButtonColor: '#purple-600'
+        });
+    });
+
+    e.target.reset(); // Reset form fields after submission
   };
 
   return (
@@ -55,18 +91,21 @@ export default function Component() {
               <input 
                 data-aos="fade-right"
                 type="text" 
+                name="user_name"
                 placeholder="Name" 
                 className="w-full bg-[#1a1a1a] border border-[#3a3a3a] text-white p-4 rounded-md focus:ring-2 focus:ring-purple-600 focus:border-transparent text-lg"
                 required
               />
               <input 
                 type="email" 
+                name="user_email"
                 data-aos="fade-right"
                 placeholder="Email" 
                 className="w-full bg-[#1a1a1a] border border-[#3a3a3a] text-white p-4 rounded-md focus:ring-2 focus:ring-purple-600 focus:border-transparent text-lg"
                 required
               />
               <textarea
+                name="message"
                 placeholder="Message" 
                 data-aos="fade-right"
                 className="w-full bg-[#1a1a1a] border border-[#3a3a3a] text-white p-4 rounded-md focus:ring-2 focus:ring-purple-600 focus:border-transparent text-lg"
