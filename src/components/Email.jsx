@@ -51,7 +51,7 @@ export default function ContactComponent() {
         });
     });
 
-    e.target.reset(); // Reset form fields after submission
+    e.target.reset(); 
   };
 
   return (
