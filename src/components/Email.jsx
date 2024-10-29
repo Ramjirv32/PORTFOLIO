@@ -24,11 +24,11 @@ export default function ContactComponent() {
 
     const messageBody = `You got a new message from:\n\nName: ${userName}\nEmail: ${userEmail}\nMessage: ${userMessage}`;
 
-    emailjs.send('service_0ftgu5e', 'template_tf5aupo', {
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, {
         from_name: userName,
         from_email: userEmail,
         message: messageBody
-    }, 'gvOiEyfmztinIkTol')
+    }, process.env.REACT_APP_EMAILJS_USER_ID)
     .then((result) => {
         Swal.fire({
             icon: 'success',
