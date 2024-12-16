@@ -68,23 +68,21 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-full bg-purple-900 opacity-30 rounded-full blur-3xl transform -translate-y-1/2"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-4xl mt-20">
-        <div className="relative w-full h-96">
+        <div className="relative w-full h-[40rem]">
           <div className="absolute inset-0 bg-purple-600 rounded-full opacity-30 blur-3xl"></div>
-          <div className="absolute inset-0 mt-12">
+          <div className="absolute inset-0">
+            
             {technologies.map((tech, index) => {
-              const angle = (index / technologies.length) * 2 * Math.PI
-              const radius = 42
-              const x = 50 + radius * Math.cos(angle)
-              const y = 50 + radius * Math.sin(angle)
               return (
                 <div
                   key={tech.name}
                   className="absolute w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center text-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-purple-700"
                   style={{
-                    left: `${x}%`,
-                    top: `${y}%`,
+                    left: '50%',
+                    top: '50%',
                     animation: `rotate-icon 20s linear infinite`,
-                    animationDelay: `${-index * (20 / technologies.length)}s`
+                    animationDelay: `${-index * (20 / technologies.length)}s`,
+                    transformOrigin: 'center'
                   }}
                 >
                   {tech.icon}
@@ -92,7 +90,7 @@ export default function Home() {
               )
             })}
           </div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-12 w-24 h-24 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-3xl shadow-inner shadow-black">
+          <div className="absolute ml-6 mt-5 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-4xl shadow-inner shadow-black">
             &lt;/&gt;
           </div>
         </div>
