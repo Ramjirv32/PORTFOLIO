@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import full from "./images/cloud.webp"
 import "./styles/home.css"
+import { useScroll } from "./scroll"
 
 const technologies = [
   { name: 'HTML', icon: <FaHtml5 size={32} /> },
@@ -20,6 +21,8 @@ const technologies = [
 
 export default function Home() {
   const aboutRef = useRef(null)
+  const contactRef = useRef(null)
+  const { handleClick } = useScroll()
 
   useEffect(() => {
     AOS.init({
@@ -54,6 +57,10 @@ export default function Home() {
     if (aboutRef.current) {
       smoothScroll(aboutRef)
     }
+  }
+
+  const scrollToContact = () => {
+    handleClick('contact')
   }
 
   return (
@@ -108,7 +115,7 @@ export default function Home() {
           </p>
 
           <button
-            onClick={scrollToAbout}
+            onClick={scrollToContact}
             className="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-lg border border-purple-500 transition-colors transform hover:bg-purple-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
           >
             Let's Connect

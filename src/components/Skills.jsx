@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import {  FaHtml5, FaJsSquare, FaNode, FaCode, FaCloud } from "react-icons/fa";
-import { SiPostgresql, SiTailwindcss, SiC } from "react-icons/si";
+import { FaHtml5, FaJsSquare, FaNode, FaCode, FaCloud, FaJava } from "react-icons/fa";
+import { SiPostgresql, SiTailwindcss } from "react-icons/si";
 
 function Skills() {
   const skills = [
@@ -11,7 +11,11 @@ function Skills() {
     { name: 'Node.js', icon: <FaNode className="text-purple-400 hover:text-white" size={20} /> },
     { name: 'Express', icon: <FaCode className="text-purple-400 hover:text-white" size={20} /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-purple-400 hover:text-white" size={20} /> },
+<<<<<<< HEAD
     { name: 'Java', icon: <SiC className="text-purple-400 hover:text-white" size={20} /> },
+=======
+    { name: 'Java', icon: <FaJava className="text-purple-400 hover:text-white" size={20} /> },
+>>>>>>> c672f9b (java-c)
     { name: ' Learning Cloud ', icon: <FaCloud className="text-purple-400 hover:text-white" size={20} /> },
   ];
 

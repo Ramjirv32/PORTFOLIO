@@ -48,8 +48,8 @@ export default function Header() {
         </nav>
         <div className="flex-none">
           <a
-            href="/cv.pdf"
-            download
+            href="/assets/finalresume.pdf"
+            download="Ramji_Resume.pdf"
             className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block"
           >
             Download CV
@@ -84,8 +84,8 @@ export default function Header() {
           ))}
           <div className="mt-4 px-4">
             <a
-              href="/cv.pdf"
-              download
+              href="/assets/finalresume.pdf"
+              download="Ramji_Resume.pdf"
               className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center"
             >
               Download CV
