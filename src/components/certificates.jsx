@@ -25,6 +25,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
+    
     <section className="py-16 px-6 relative bg-black">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/50 to-black"></div>
       
