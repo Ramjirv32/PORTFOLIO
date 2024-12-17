@@ -25,3 +25,12 @@ button {
     transform: rotate(360deg) translate(300px) rotate(-360deg);
   }
 }
+
+/* Add these styles if needed */
+.certificate-card:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certificate-overlay {
+  transition: opacity 0.3s ease-in-out;
+}
