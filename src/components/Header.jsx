@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { handleClick } = useScroll()
 
-  const navItems = ["About", "Projects", "Skills", "Contact"]
+  const navItems = ["About", "Projects", "Skills", "Certificates", "Contact"]
 
   const handleNavClick = (e, item) => {
     e.preventDefault()

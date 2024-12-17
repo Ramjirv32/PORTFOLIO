@@ -5,6 +5,7 @@ import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx'; 
 import Scroll from './components/scroll.jsx';
 import Email from './components/Email.jsx';
+import Certificates from './components/certificates.jsx';
  
 import 'aos/dist/aos.css';
 
@@ -21,6 +22,9 @@ function App() {
         </section>
         <section id="skills">
           <Skills />
+        </section>
+        <section id="certificates">
+          <Certificates />
         </section>
         <section id="contact">
           <Email />
