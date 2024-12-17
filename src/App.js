@@ -6,7 +6,6 @@ import Projects from './components/Projects.jsx';
 import Scroll from './components/scroll.jsx';
 import Email from './components/Email.jsx';
 import Certificates from './components/certificates.jsx';
- 
 import 'aos/dist/aos.css';
 
 function App() {
