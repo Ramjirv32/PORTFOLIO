@@ -48,7 +48,7 @@ export default function Header() {
         </nav>
         <div className="flex-none">
           <a
-            href="/assets/finalresume.pdf"
+            href="/assets/Ramji-REsume.pdf"
             download="Ramji_Resume.pdf"
             className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block"
           >
