@@ -76,7 +76,7 @@ export default function Home() {
               return (
                 <div
                   key={tech.name}
-                  className="absolute w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center text-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-purple-700"
+                  className="absolute w-12 md:w-16 h-12 md:h-16 bg-gray-800 rounded-lg flex items-center justify-center text-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-purple-700"
                   style={{
                     left: '50%',
                     top: '50%',
@@ -85,12 +85,16 @@ export default function Home() {
                     transformOrigin: 'center'
                   }}
                 >
-                  {tech.icon}
+                  <div className="transform scale-75 md:scale-100">
+                    {tech.icon}
+                  </div>
                 </div>
               )
             })}
           </div>
-          <div className="absolute ml-6 mt-5 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-4xl shadow-inner shadow-black">
+          <div 
+            className="absolute ml-6 mt-5 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-700 bg-opacity-50 rounded-full flex items-center justify-center text-white font-bold text-4xl shadow-inner shadow-black"
+          >
             &lt;/&gt;
           </div>
         </div>
