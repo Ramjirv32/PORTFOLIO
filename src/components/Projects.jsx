@@ -12,8 +12,7 @@ import 'aos/dist/aos.css';
 const projects = [
 {
 title: "Vehicle Rental System",
-role: "Console Application Developer",
-date: "March 2023 - April 2023",
+date: "October 2023",
 description: [
 "Developed a comprehensive vehicle rental management system in C",
 "Implemented user authentication and booking functionality using file handling",
@@ -27,8 +26,7 @@ technologies: ["C", "Data Structures", "File I/O", "Memory Management"]
 },
 {
 title: "Weather API Integration",
-role: "Full Stack Developer",
-date: "May 2023 - June 2023",
+date: "July 2023",
 description: [
 "Built a weather application using Node.js and Open Weather API",
 "Implemented real-time weather data fetching and display",
@@ -42,8 +40,7 @@ technologies: ["React", "Node.js", "REST API", "Tailwind CSS"]
 },
 {
 title: "Smart Parking System",
-role: "Team Lead Developer",
-date: "July 2023 - September 2023",
+date: "April 2023 - July 2023",
 description: [
 "Led development of a full-stack parking system website",
 "Implemented real-time parking space tracking with IoT",
@@ -57,8 +54,7 @@ technologies: ["React", "Node.js", "IoT", "PostgreSQL"]
 },
 {
 title: "AI Image Generator",
-role: "Backend Developer",
-date: "October 2023 - November 2023",
+date: "September 2023",
 description: [
 "Developed AI-powered text-to-image generation system",
 "Integrated Hugging Face API for image processing",
@@ -72,8 +68,7 @@ technologies: ["Node.js", "Hugging Face API", "React", "Express"]
 },
 {
 title: "AI-Integrated Application",
-role: "Full Stack Developer",
-date: "December 2023 - Present",
+date: "October 2023 - Present",
 description: [
 "Building advanced AI features and integrations",
 "Implementing modern UI/UX design principles",
@@ -98,7 +93,6 @@ anchorPlacement: 'top-center',
 offset: 30
 });
 
-// Add custom animation class
 const style = document.createElement('style');
 style.textContent = `
 .flip-animation-left {
@@ -164,11 +158,8 @@ data-aos="fade-down"
 >
 Experience & Projects
 </h2>
-{/* Timeline Container */}
 <div className="relative project-timeline">
-{/* Center Line */}
 <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 md:w-1 bg-purple-500/50 rounded-full transform md:-translate-x-1/2"></div>
-{/* Projects */}
 {projects.map((project, index) => {
 const isEven = index % 2 === 0;
 return (
@@ -178,7 +169,6 @@ className={`flex flex-col md:flex-row items-start md:items-center justify-betwee
 isEven ? 'md:flex-row' : 'md:flex-row-reverse'
 }`}
 >
-{/* Timeline Circle with Project Image */}
 <div 
 className="timeline-circle absolute left-0 md:left-1/2 w-10 h-10 md:w-16 md:h-16 bg-purple-500 rounded-full border-2 border-black z-20 overflow-hidden hover:scale-125 transition-transform duration-300"
 data-aos="zoom-in"
@@ -194,7 +184,6 @@ alt={project.title}
 className="w-full h-full object-cover"
 />
 </div>
-{/* Content */}
 <div 
 className={`project-content w-full md:w-5/12 ${isEven ? 'md:pr-6' : 'md:pl-6'}`}
 >
@@ -209,7 +198,6 @@ style={{
 transformOrigin: isEven ? `calc(100% + 2.5rem) center` : `-2.5rem center`
 }}
 >
-{/* Project Info */}
 <div className="space-y-3 md:space-y-4">
 <div>
 <h3 
@@ -219,13 +207,6 @@ data-aos-delay="400"
 >
 {project.title}
 </h3>
-<p 
-className="text-sm md:text-lg font-medium text-purple-400"
-data-aos="fade-up"
-data-aos-delay="500"
->
-{project.role}
-</p>
 <p 
 className="text-xs md:text-base text-gray-400"
 data-aos="fade-up"
@@ -246,7 +227,6 @@ data-aos-delay={700 + (i * 100)}
 </li>
 ))}
 </ul>
-{/* Technologies */}
 <div className="flex flex-wrap gap-1.5 md:gap-2">
 {project.technologies.map((tech, i) => (
 <span
@@ -259,7 +239,6 @@ data-aos-delay={1100 + (i * 100)}
 </span>
 ))}
 </div>
-{/* Links */}
 <div 
 className="flex space-x-3 md:space-x-4 pt-2"
 data-aos="fade-up"
@@ -290,9 +269,7 @@ GitHub
 </div>
 </div>
 </div>
-
 </div>
-{/* Spacer for opposite side on desktop */}
 <div className="hidden md:block md:w-5/12"></div>
 </div>
 );

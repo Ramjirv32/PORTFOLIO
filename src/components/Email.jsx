@@ -15,7 +15,6 @@ const [typingSpeed, setTypingSpeed] = useState(150);
 
 useEffect(() => {
 const typingInterval = setInterval(() => {
-// Create the infinite loop
 const i = loopNum % fullText.length;
 if (!isDeleting) {
 setDisplayText(fullText.slice(0, displayText.length + 1));
@@ -23,8 +22,8 @@ setTypingSpeed(150);
 
 if (displayText === fullText) {
 setIsDeleting(true);
-setTypingSpeed(100); // Faster deletion
-setTimeout(() => {}, 2000); // Pause at complete text
+setTypingSpeed(100);
+setTimeout(() => {}, 2000);
 }
 } else {
 setDisplayText(fullText.slice(0, displayText.length - 1));
@@ -32,17 +31,15 @@ setDisplayText(fullText.slice(0, displayText.length - 1));
 if (displayText === '') {
 setIsDeleting(false);
 setLoopNum(loopNum + 1);
-setTypingSpeed(500); // Pause before retyping
+setTypingSpeed(500);
 }
 }
 }, typingSpeed);
 
-// Cursor blinking
 const cursorInterval = setInterval(() => {
 setShowCursor(prev => !prev);
 }, 500);
 
-// Initialize AOS
 AOS.init({
 duration: 1000,
 easing: 'ease-in-out',
@@ -104,7 +101,6 @@ return (
 <>
 <section className="relative bg-black py-4 md:py-16 w-full min-h-screen flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 bg-purple-900 opacity-40 rounded-full blur-3xl"></div>
-{/* Social Links - Hidden on very small screens */}
 <div className="hidden sm:flex fixed md:absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 flex-col gap-2 md:gap-3 z-50 md:z-0">
 {[ 
 { name: 'Twitter', icon: <FaTwitter size={12} className="md:text-xl" />, href: '#' },
@@ -145,7 +141,6 @@ I'm always interested in hearing about new projects and opportunities.
 </div>
 </div>
 
-{/* Right Section - Contact Form */}
 <div className="w-full md:w-1/2">
 <form onSubmit={handleSubmit} className="space-y-3 md:space-y-6">
 <input 
