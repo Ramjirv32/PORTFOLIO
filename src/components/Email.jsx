@@ -140,7 +140,7 @@ I'm always interested in hearing about new projects and opportunities.
 <div className="flex flex-col space-y-2 md:space-y-4" data-aos="fade-up">
 <div className="flex items-center space-x-2">
 <FaEnvelope className="text-purple-400 text-base md:text-3xl" />
-<span className="text-xs md:text-2xl text-gray-300">ramjirv32@gmail.com</span>
+<span className="text-xs md:text-2xl text-gray-300">ramjib2311@gmail.com</span>
 </div>
 </div>
 </div>
