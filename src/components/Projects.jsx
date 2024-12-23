@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useEffect } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -160,7 +159,7 @@ return (
 <div className="absolute inset-0 bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
 <div className="container mx-auto px-4 md:px-6 relative z-10">
 <h2 
-className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white"
+className="text-xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white"
 data-aos="fade-down"
 >
 Experience & Projects
@@ -214,21 +213,21 @@ transformOrigin: isEven ? `calc(100% + 2.5rem) center` : `-2.5rem center`
 <div className="space-y-3 md:space-y-4">
 <div>
 <h3 
-className="text-lg md:text-xl font-bold text-white mb-1"
+className="text-base md:text-xl font-bold text-white mb-1"
 data-aos="fade-up"
 data-aos-delay="400"
 >
 {project.title}
 </h3>
 <p 
-className="text-base md:text-lg font-medium text-purple-400"
+className="text-sm md:text-lg font-medium text-purple-400"
 data-aos="fade-up"
 data-aos-delay="500"
 >
 {project.role}
 </p>
 <p 
-className="text-sm md:text-base text-gray-400"
+className="text-xs md:text-base text-gray-400"
 data-aos="fade-up"
 data-aos-delay="600"
 >
@@ -239,7 +238,7 @@ data-aos-delay="600"
 {project.description.map((point, i) => (
 <li 
 key={i} 
-className="text-base md:text-lg"
+className="text-sm md:text-lg"
 data-aos="fade-up"
 data-aos-delay={700 + (i * 100)}
 >
@@ -252,7 +251,7 @@ data-aos-delay={700 + (i * 100)}
 {project.technologies.map((tech, i) => (
 <span
 key={i}
-className="px-2 md:px-3 py-0.5 md:py-1 bg-purple-900/30 rounded-full text-sm md:text-base text-purple-300"
+className="px-2 md:px-3 py-0.5 md:py-1 bg-purple-900/30 rounded-full text-xs md:text-base text-purple-300"
 data-aos="zoom-in"
 data-aos-delay={1100 + (i * 100)}
 >
@@ -271,9 +270,9 @@ data-aos-delay="1500"
 href={project.liveLink}
 target="_blank"
 rel="noopener noreferrer"
-className="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 hover:scale-105 transform text-sm md:text-base"
+className="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 hover:scale-105 transform text-xs md:text-base"
 >
-<FaExternalLinkAlt className="mr-1.5 md:mr-2 text-sm md:text-base" />
+<FaExternalLinkAlt className="mr-1.5 md:mr-2 text-xs md:text-base" />
 Live Demo
 </a>
 )}
@@ -282,15 +281,16 @@ Live Demo
 href={project.githubLink}
 target="_blank"
 rel="noopener noreferrer"
-className="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 hover:scale-105 transform text-sm md:text-base"
+className="flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300 hover:scale-105 transform text-xs md:text-base"
 >
-<FaGithub className="mr-1.5 md:mr-2 text-sm md:text-base" />
+<FaGithub className="mr-1.5 md:mr-2 text-xs md:text-base" />
 GitHub
 </a>
 )}
 </div>
 </div>
 </div>
+
 </div>
 {/* Spacer for opposite side on desktop */}
 <div className="hidden md:block md:w-5/12"></div>

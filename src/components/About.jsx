@@ -51,22 +51,22 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="container mx-auto py-16 px-6 relative z-10">
+    <section id="about" className="container mx-auto py-8 md:py-16 px-3 md:px-6 relative z-10">
       <div className="absolute inset-0 bg-purple-900 opacity-40 rounded-full blur-3xl"></div>
-      <h2 className="text-3xl font-bold text-center mb-8 relative z-20">About Me</h2>
+      <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8 relative z-20">About Me</h2>
       <div className="md:flex md:items-center md:space-x-8 relative z-20">
-        <div className="md:w-1/3 mb-8 md:mb-0 card-3d">
+        <div className="md:w-1/3 mb-4 md:mb-0 card-3d max-w-[250px] md:max-w-none mx-auto">
           <img src={full} alt="Ramji" className="w-full rounded-lg shadow-2xl" />
         </div>
         <div className="md:w-2/3">
-          <div className="space-y-4 card-3d p-6 bg-purple-900/10 rounded-lg backdrop-blur-sm">
-            <p className="text-gray-300 leading-relaxed" data-aos="fade-up">
+          <div className="space-y-2 md:space-y-4 card-3d p-3 md:p-6 bg-purple-900/10 rounded-lg backdrop-blur-sm">
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed" data-aos="fade-up">
               My name is Ramji, and I am a Full Stack Developer currently studying in II CSE B at KPRIET. There has always been a burning passion for creating new things and a constant urge to learn, which has driven me into the technology industry.
             </p>
-            <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-2 md:mt-4" data-aos="fade-up">
               I have experience in both frontend and backend development, and I am looking for more new opportunities. Recently, I have been working on integrating cloud technologies into applications because I believe they are essential for building strong applications in the modern world.
             </p>
-            <p className="text-gray-300 leading-relaxed mt-4" data-aos="fade-up">
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-2 md:mt-4" data-aos="fade-up">
               If I am not working on code, I love browsing for new tech, working on open-source projects, or thinking about my next move. I am always ready for collaboration and new opportunities in web development and cloud technologies.
             </p>
           </div>

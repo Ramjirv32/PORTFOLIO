@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="bg-[#0a0118] text-gray-300 py-4 px-6 fixed w-full z-50"
+      className="bg-[#0a0118] text-gray-300 py-2 md:py-4 px-3 md:px-6 fixed w-full z-50"
       initial="hidden"
       animate="visible"
       exit="hidden"
@@ -30,7 +30,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex-none">
-          <a href="/" className="text-3xl font-bold animate-pulse" onClick={(e) => handleNavClick(e, "home")}>
+          <a href="/" className="text-xl md:text-3xl font-bold animate-pulse" onClick={(e) => handleNavClick(e, "home")}>
             Ramji
           </a>
         </div>
@@ -39,7 +39,7 @@ export default function Header() {
             <a
               key={item}
               href={`/#${item.toLowerCase()}`}
-              className="hover:text-white transition-colors"
+              className="text-sm md:text-base hover:text-white transition-colors"
               onClick={(e) => handleNavClick(e, item)}
             >
               {item}
@@ -50,48 +50,36 @@ export default function Header() {
           <a
             href="/assets/Ramji-REsume.pdf"
             download="Ramji_Resume.pdf"
-            className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block"
+            className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-2 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-base transition-all duration-300 transform hover:scale-105 inline-block"
           >
             Download CV
           </a>
         </div>
         <button
-          className="md:hidden text-white ml-4"
+          className="md:hidden text-white ml-2 md:ml-4"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <Menu size={24} />
+          <Menu size={20} />
         </button>
       </div>
+
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div
-          className="md:hidden mt-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href={`/#${item.toLowerCase()}`}
-              className="block py-2 px-4 text-sm relative text-gray-300 hover:text-white transition-colors duration-300 group"
-              onClick={(e) => handleNavClick(e, item)}
-            >
-              {item}
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
-          <div className="mt-4 px-4">
-            <a
-              href="/assets/finalresume.pdf"
-              download="Ramji_Resume.pdf"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center"
-            >
-              Download CV
-            </a>
-          </div>
-        </motion.div>
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0118] border-t border-gray-800">
+          <nav className="flex flex-col space-y-2 p-3">
+            {navItems.map((item) => (
+              <a
+                key={item}
+                href={`/#${item.toLowerCase()}`}
+                className="text-sm hover:text-white transition-colors py-1"
+                onClick={(e) => handleNavClick(e, item)}
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
       )}
     </motion.header>
   )
