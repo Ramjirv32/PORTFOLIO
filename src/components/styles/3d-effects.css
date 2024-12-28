@@ -1,6 +1,6 @@
 /* 3D Card Effects */
 .card-3d {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   transform-style: preserve-3d;
   perspective: 1000px;
   backface-visibility: hidden;
@@ -8,9 +8,6 @@
 
 .card-3d:hover {
   transform: translateZ(20px);
-  box-shadow: 
-    0 0 20px rgba(139, 92, 246, 0.3),
-    0 0 40px rgba(139, 92, 246, 0.2);
 }
 
 /* Smooth transitions */
@@ -76,4 +73,29 @@
 
 .floating {
   animation: float 3s ease-in-out infinite;
+}
+
+/* Setup image rotation animation */
+@keyframes rotate360 {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.setup-image {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s ease;
+}
+
+.setup-image:hover {
+  animation: rotate360 15s linear infinite;
+}
+
+.setup-image img {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
 } 

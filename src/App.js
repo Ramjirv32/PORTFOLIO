@@ -5,7 +5,8 @@ import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx'; 
 import Scroll from './components/scroll.jsx';
 import Email from './components/Email.jsx';
-import Certificates from './components/certificates.jsx';
+import About from './components/About.jsx';
+import Certificates from './components/Certificates.jsx';
 import 'aos/dist/aos.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         <Navbar />
         <section id="home">
           <Home />
+        </section>
+        <section id="about">
+          <About />
         </section>
         <section id="projects">
           <Projects />
