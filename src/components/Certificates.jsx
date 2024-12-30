@@ -62,8 +62,7 @@ export default function Certificates() {
                   <p className="text-base text-purple-200 mb-2">{cert.issuer}</p>
                   <p className="text-sm text-purple-300">{cert.date}</p>
                 </div>
-                {!cert.isPlaceholder && (
-                  <a
+                                  <a
                     href={cert.credential}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -71,7 +70,7 @@ export default function Certificates() {
                   >
                     View Certificate
                   </a>
-                )}
+                
                 {cert.isPlaceholder && (
                   <p className="text-purple-400 text-sm mt-2 italic">certifications</p>
                 )}
