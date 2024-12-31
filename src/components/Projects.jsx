@@ -36,7 +36,7 @@ description: [
 image: api,
 liveLink: "https://weather-api-in-react-js.vercel.app/",
 githubLink: "https://github.com/Ramjirv32/Weather-API-in-REACT-JS",
-technologies: ["React", "Node.js", "REST API", "Tailwind CSS"]
+technologies: ["React", "Node.js", "API", "Tailwind CSS"]
 },
 {
 title: "Smart Parking System",
