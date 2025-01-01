@@ -16,6 +16,13 @@ const certificates = [
     image: "/assets/aws.png"
   },
   {
+    title: "MongoDB Certification",
+    issuer: "MongoDB",
+    date: "Feb 2025",
+    credential: "/assets/MONGO.pdf",
+    image: "/assets/MONGO.png"
+  },
+  {
     title: "Coming Soon",
     issuer: "Future Certification",
     date: "2025",
