@@ -18,7 +18,7 @@ const certificates = [
   {
     title: "MongoDB Certification",
     issuer: "MongoDB",
-    date: "Feb 2025",
+    date: "Jan 2025",
     credential: "/assets/MONGO.pdf",
     image: "/assets/MONGO.png"
   },
